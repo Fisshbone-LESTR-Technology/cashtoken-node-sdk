@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "npm run build",
-    "test": "jest --watch",
+    "test": "jest",
+    "test-with-watch": "jest --watch",
     "coverage": "jest --coverage",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
@@ -17,8 +18,9 @@
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^24.0.15",
-    "husky": "^3.0.0",
+    "husky": "^3.0.1",
     "jest": "^24.8.0",
+    "lint-staged": "^9.2.1",
     "prettier": "^1.17.1",
     "ts-jest": "^24.0.2",
     "tslint": "^5.17.0",
@@ -29,9 +31,12 @@
   "files": [
     "lib/**/*"
   ],
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": ["npm run lint", "prettier --write", "git add", "npm run build"]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run format && npm run build"
+      "pre-commit": "lint-staged"
     }
   }
 }
