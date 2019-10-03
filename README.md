@@ -65,8 +65,4 @@ const response = cashToken.giftCashToken({
 
 console.log(response.status); // succeeded or failed
 console.log(response.message); // response message
-if(response.isOk){ // all is well, correct response, we have access token
-    console.log(response.data.userId);
-    console.log(response.data.accessToken);
-}
 ```
