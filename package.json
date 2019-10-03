@@ -48,5 +48,21 @@
     "hooks": {
       "pre-commit": "lint-staged && npm run build"
     }
-  }
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fisshbone-LESTR-Technology/cashtoken-node-sdk.git"
+  },
+  "keywords": [
+    "CashToken",
+    "gifting",
+    "reward"
+  ],
+  "bugs": {
+    "url": "https://github.com/Fisshbone-LESTR-Technology/cashtoken-node-sdk/issues"
+  },
+  "homepage": "https://github.com/Fisshbone-LESTR-Technology/cashtoken-node-sdk#readme"
 }
