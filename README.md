@@ -4,18 +4,18 @@ CashToken NodeJS SDK for Gifting CashTokens
 ### Installation
 
 ```sh
-$ npm install --save cashtoken-node-sdk
+$ npm install --save @fisshboneandlestr/cashtoken-node-sdk
 ```
 
 ### Usage
 
 ```typescript
-import { CashToken } from "cashtoken-node-sdk"
+import { CashToken } from "@fisshboneandlestr/cashtoken-node-sdk"
 ```
 or 
 
 ```javascript
-const { CashToken } = require("cashtoken-node-sdk")
+const { CashToken } = require("@fisshboneandlestr/cashtoken-node-sdk")
 ```
 
 #### Test Keys

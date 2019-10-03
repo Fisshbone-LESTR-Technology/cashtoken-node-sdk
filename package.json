@@ -1,6 +1,6 @@
 {
-  "name": "@fissboneandlestr/cashtoken-node-sdk",
-  "version": "1.0.0",
+  "name": "@fisshboneandlestr/cashtoken-node-sdk",
+  "version": "1.0.1",
   "description": "CashToken NodeJS SDK",
   "main": "lib/index.js",
   "scripts": {
