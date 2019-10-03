@@ -1,7 +1,7 @@
 {
-  "name": "ts-express-starter",
+  "name": "@fissboneandlestr/cashtoken-node-sdk",
   "version": "1.0.0",
-  "description": "TS Module Starter",
+  "description": "CashToken NodeJS SDK",
   "main": "lib/index.js",
   "scripts": {
     "start": "npm run build",
@@ -12,31 +12,41 @@
     "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
     "lint": "tslint -p tsconfig.json",
     "fix": "tslint --fix -p tsconfig.json",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "prepublish": "npm run build"
   },
   "author": "Peter Iyiola",
   "license": "ISC",
   "devDependencies": {
-    "@types/jest": "^24.0.15",
-    "husky": "^3.0.1",
-    "jest": "^24.8.0",
-    "lint-staged": "^9.2.1",
+    "@types/jest": "^24.0.18",
+    "@types/node": "^12.7.9",
+    "@types/request-promise": "^4.1.44",
+    "husky": "^3.0.8",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.1",
     "prettier": "^1.17.1",
-    "ts-jest": "^24.0.2",
-    "tslint": "^5.17.0",
+    "ts-jest": "^24.1.0",
+    "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.5.2"
+    "typescript": "^3.6.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "request": "^2.88.0",
+    "request-promise": "^4.2.4"
+  },
   "files": [
     "lib/**/*"
   ],
   "lint-staged": {
-    "*.{ts,tsx,js,jsx}": ["npm run lint", "prettier --write", "git add", "npm run build"]
+    "*.{ts,tsx,js,jsx}": [
+      "npm run lint",
+      "prettier --write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged && npm run build"
     }
   }
 }
